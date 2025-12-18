@@ -1,19 +1,18 @@
-# Welcome to SL2P-PYTHON
+# Welcome to SL2P-FORCE
 
 
-SL2P-PYTHON is a python implementation of the Simplified Level 2 Product Prototype Processor (SL2P) described in [Weiss and Baret (2016)](https://step.esa.int/docs/extra/ATBD_S2ToolBox_L2B_V1.1.pdf). It corresponds to the algorithm implemented in the [LEAf-Toolbox](https://github.com/rfernand387/LEAF-Toolbox) that corrects for bugs in the implemention of SL2P within the European Space Agency Sentinel 2 Toolbox as documented in [Fernandes et al. 2023](https://www.sciencedirect.com/science/article/pii/S0034425723001517?via%3Dihub).
+SL2P-FORCE is a python implementation of the Simplified Level 2 Product Prototype Processor (SL2P) described in [Weiss and Baret (2016)](https://step.esa.int/docs/extra/ATBD_S2ToolBox_L2B_V1.1.pdf). It corresponds to the algorithm implemented in the [LEAf-Toolbox](https://github.com/rfernand387/LEAF-Toolbox) that corrects for bugs in the implemention of SL2P within the European Space Agency Sentinel 2 Toolbox as documented in [Fernandes et al. 2023](https://www.sciencedirect.com/science/article/pii/S0034425723001517?via%3Dihub).
 
-SL2P-PYTHON is designed to estimate vegetation biophysical variables (Table 1) at 10 or 20 meters spatial resolution from Sentinel-2 MSI L2A images. 
+SL2P-FORCE is designed to estimate vegetation biophysical variables (Table 1) at 10 or 20 meters spatial resolution from Sentinel-2 FORCE Tiles. 
 
 Required inputs
 ---------------
--	[Sentinel-2 MSI L2A product at ESA SAFE format](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjAxLzdlqmEAxUPAHkGHf0SBh8QFnoECA0QAw&url=https%3A%2F%2Fsentinels.copernicus.eu%2Fweb%2Fsentinel%2Ftechnical-guides%2Fsentinel-2-msi%2Flevel-2a%2Fproduct-formatting%23%3A~%3Atext%3DThe%2520Level%252D2A%2520product%2520has%2Ca%2520manifest.&usg=AOvVaw3l2OL2cIPi5idQJfHwqaRQ&opi=89978449)
+-	Sentinel 2 FORCE Tile (Single TIF with needed bands or multiple TIFs for each band)
 -	The needed vegetation variable (Table 1)
--	The needed spatial resolution: S2_SR (for 20-m) / S2_SR_10m (for 10-m)
-
+-	The needed spatial resolution: 10m or 20m (depending on input and desired output)
 Outputs
 -------
-SL2P-PYTHON is designed to estimate five vegetation variables (Table 1). 
+SL2P-FORCE is designed to estimate five vegetation variables (Table 1). 
 
 Products are composed of 4-layers and exported in GeoTIFF format (Table 2). 
 
@@ -44,11 +43,8 @@ Products are composed of 4-layers and exported in GeoTIFF format (Table 2).
 
 <p align="center"> Figure 1: SL2P-PYTHON principles </p>
 
-Test dataset
-------------
-A [test dataset](https://drive.google.com/drive/folders/11BGcS0OA4EjGYb9XGfBtNPFpdgw10uWI?usp=drive_link) is provided for a quick test of SL2P-PYTHON as well as for comparison with the corresponding product obtained using the Sentinel Application Platform (SNAP) implementation of SL2P. 
 
-For more details about SL2P-PYTHON please see [ATBD document](https://github.com/djamainajib/SL2P_python/blob/main/GEOMATICS%20CANADA%20xx%20-%20SL2P%20PYTHON_version_0.docx).
+For more details about the original SL2P-PYTHON please see [ATBD document](https://github.com/djamainajib/SL2P_python/blob/main/GEOMATICS%20CANADA%20xx%20-%20SL2P%20PYTHON_version_0.docx).
 
 
 Dependencies:
